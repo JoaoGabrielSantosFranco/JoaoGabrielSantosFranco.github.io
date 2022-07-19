@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0
+}
+
+.Nome {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.estudando {
+  width: 300px;
+  animation: digitandoLinguagens 5s steps(40),blinkCursor 900ms infinite normal;
+  border-right: 2px solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: #000000;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+@keyframes digitandoLinguagens {
+  from {
+    width: 0%;
+  }
+
+}
+
+
+
+.container {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333333;
+  text-align: center
+}
+
+a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none
+}
+
+
+.perfil.Principal {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 2rem 0
+}
+
+
+.description.Principal {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.3rem
+}
+
+.grid.Principal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 1.5rem
+}
+
+.card.Principal {
+  margin: 1rem;
+  -webkit-flex-basis: 45%;
+  -ms-flex-preferred-size: 45%;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  -webkit-transition: color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease
+}
+
+.card.Principal:hover,
+.card.Principal:focus,
+.card.Principal:active {
+  color: #107fd2;
+  border-color: #107fd2
+}
+
+.card.Principal h3.Principal {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem
+}
+
+.card.Principal p.Principal {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5
+}
+
+@media (max-width:640px) {
+  .perfil.Principal {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem
+  }
+
+
+  .grid.Principal {
+    width: 100%;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-top: 0rem
+  }
+
+  .card.Principal {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%
+  }
+
+  .card.Principal h3.Principal {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem
+  }
+}
