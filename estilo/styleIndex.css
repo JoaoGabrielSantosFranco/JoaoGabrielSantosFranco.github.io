@@ -1,11 +1,15 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+  Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 html,
 body {
   padding: 0;
-  margin: 0
+  margin: 0;
+    
 }
 
 .Nome {
@@ -15,12 +19,12 @@ body {
 }
 
 .estudando {
-  width: 300px;
-  animation: digitandoLinguagens 5s steps(40),blinkCursor 900ms infinite normal;
+  font-size: 1.2rem;
+  width: 350px;
+  animation: digitandoLinguagens 5s steps(40), blinkCursor 900ms infinite normal;
   border-right: 2px solid transparent;
   white-space: nowrap;
   overflow: hidden;
-
 }
 
 @keyframes blinkCursor {
@@ -33,15 +37,11 @@ body {
   }
 }
 
-
 @keyframes digitandoLinguagens {
   from {
     width: 0%;
   }
-
 }
-
-
 
 .container {
   min-height: 80vh;
@@ -58,33 +58,37 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #333333;
-  text-align: center
+  text-align: center;
 }
 
 a {
   color: inherit;
   -webkit-text-decoration: none;
-  text-decoration: none
+  text-decoration: none;
 }
 
-
-.perfil.Principal {
-  width: 200px;
-  height: 200px;
+.ImgRedonda {
   border-radius: 50%;
-  margin: 2rem 0;
-
+  
 }
-
+.ImgRedonda:hover,
+.ImgRedondal:focus,
+.ImgRedonda:active {
+  border: 2px solid rgb(171, 171, 171);
+}
 
 .description.Principal {
   text-align: center;
-  line-height: 1.5;
-  font-size: 1.3rem
-  
+  line-height: 1.6;
+  font-size: 1.3rem;
+  width: auto;
+  max-width: 700px;
+  margin: 10px;
+
 }
 
 .grid.Principal {
@@ -112,52 +116,38 @@ a {
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  -webkit-transition: color 0.15s ease, border-color 0.15s ease;
-  transition: color 0.15s ease, border-color 0.15s ease
 }
 
-.card.Principal:hover,
-.card.Principal:focus,
-.card.Principal:active {
-  color: #107fd2;
-  border-color: #107fd2
-}
 
-.card.Principal h3.Principal {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem
-}
 
-.card.Principal p.Principal {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5
-}
-
-@media (max-width:640px) {
-  .perfil.Principal {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 2rem
+@media (max-width: 640px) {
+  .ImgRedonda {
+    border-radius: 50%;
+    margin: 2rem 0;
   }
-
+  .ImgRedonda:hover,
+.ImgRedondal:focus,
+.ImgRedonda:active {
+  color: #107fd2;
+  border-color: #107fd2;
+}
 
   .grid.Principal {
     width: 100%;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin-top: 0rem
+    margin-top: 0rem;
   }
 
   .card.Principal {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%
+    flex-basis: 100%;
   }
 
   .card.Principal h3.Principal {
     margin: 0 0 0.5rem 0;
-    font-size: 1.5rem
+    font-size: 1.5rem;
   }
 }
