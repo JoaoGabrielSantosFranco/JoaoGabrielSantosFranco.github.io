@@ -11,6 +11,9 @@ body {
   margin: 0;
     
 }
+.redesSociais{
+  display: flex;
+}
 
 .Nome {
   color: rgb(0, 0, 0);
@@ -73,6 +76,7 @@ a {
 
 .ImgRedonda {
   border-radius: 50%;
+  margin: 0px 0px 0px 10px;
   
 }
 .ImgRedonda:hover,
